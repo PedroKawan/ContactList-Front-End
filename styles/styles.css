@@ -93,7 +93,7 @@ body {
     padding-left: 0px;
 }
 
-#div-contact ul li {
+.list-item {
     width: 90%;
     height: 6em;
     margin: 1em auto;
@@ -102,41 +102,70 @@ body {
     background-color: #FFF;
     padding-top: 1px;
     transition-duration: 0.5s;
+    display: flex;
 }
 
-#div-contact ul li:hover {
-    scale: 1.05
+.list-item:hover {
+    scale: 1.08;
 }
 
-#div-contact ul li img{
+.list-item__image{
+    width: 7em;
+    margin: 0;
+}
+
+.list-item__image img {
     width: 5em;
     border-radius: 50%;
     margin: 0.4em 1em;
-    float: left;
 }
 
-#div-contact ul li h1 {
-    margin: 0.5em 0em 0em 5.3em;
+.list-item__info {
+    width: 15em;
+}
+
+.list-item__name {
+    margin: 0.6em auto 0 0.5em;
     font-size: 1.5em;
 }
 
-#div-contact ul li h2 {
+.list-item__email {
     font-size: 0.8em;
     color: rgba(0, 0, 0, .6);
-    margin-top: 0;
-    margin-left: 10em;
+    margin: 0.1em auto auto 1em;
 }
 
-#div-contact ul li p {
-    width: 10em;
-    height: 4em;
-    font-size: 0.8em;
-    position: relative;
-    left: 27.8em;
-    bottom: 6.5em;
+.list-item__edit {
+    width: 9em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;   
+}
 
+.list-item__edit__info {
+    padding-top: 0.5em;
+}
+
+.list-item__date, .list-item__number {
+    width: auto;
+    font-size: 0.8em;
     text-align: right;
     color: rgba(0, 0, 0, .6);
+    margin: 0.3em 1em auto auto;
+}
+
+
+.list-item__edit__manager {
+    height: 4em;
+    display: flex;
+    justify-content: right;
+}
+.list-item__edit__manager img {
+    width: 15px;
+    height: 15px;
+    align-self: flex-end;
+    margin: auto 1em 1em 0;
+    opacity: 40%;
 }
 
 aside {
