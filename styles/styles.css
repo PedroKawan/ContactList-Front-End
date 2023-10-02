@@ -84,7 +84,7 @@ body {
     overflow: auto;
 }
 
-#div-contact ul{
+.list {
     width: 100%;
     height: max-content;
     margin: auto;
