@@ -5,6 +5,7 @@ body {
     background-position: bottom right;
     background-position: top left;
 }
+
 /* ------------------------------- PRINCIPAL HEADER -------------------------------*/
 #principal-header {
     background: url("../images/elements/principal-header-image.jpg") no-repeat;
@@ -56,118 +57,131 @@ body {
 #principal-header a:active {
     color: #000;
 }
-/* ---- */
-/* --------------------------------------------------------------*/
 
-
-
-
-/* ------------------------------- PRINCIPAL MAIN -------------------------------*/
 #principal-content {
-   background-color: rgba(0, 0, 0, .9);
-    width: 100%;
-    height: 40em;
-    padding-top: 1px;
-    display: flex;
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, .9);
+     width: 100%;
+     height: 40em;
+     padding-top: 1px;
+     display: flex;
+     overflow: hidden;
 }
 
 #div-contact {
     background-color: rgba(0, 255, 255, 0.4);
-    width: 35em;
+    width: 70em;
     min-width: 25em;
     height: 30em;
     outline: 0.2em dashed #FFF;
     margin: auto;
     position: relative;
+    padding: 1em;
     left: 12%;
     overflow: auto;
 }
 
 .list {
-    width: 100%;
-    height: max-content;
-    margin: auto;
-    padding-top: 1px;
-    list-style: none;
-    padding-left: 0px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    gap: 1em;
 }
 
+.list:hover .list-item:not(:hover) {
+    opacity: 0.5;
+}
+
+
 .list-item {
-    width: 90%;
-    height: 6em;
-    margin: 1em auto;
-    border: 0.1em solid;
-    border-radius: 0.5em;
     background-color: #FFF;
-    padding-top: 1px;
-    transition-duration: 0.5s;
+    width: 18em;
+    height: 20em;
+    margin: 0 0 1em;
+    border-radius: 1em;
     display: flex;
+    flex-direction: column;
+    transition-duration: 0.4s;
+    opacity: 1;
+    box-shadow: 0 0 1em #000;
 }
 
 .list-item:hover {
-    scale: 1.08;
+    scale: 1.1;
 }
 
-.list-item__image{
-    width: 7em;
-    margin: 0;
+.list-item__image {
+    background: url("../images/elements/thumb02.jpg") center;
+    background-size: cover;
+    height: 10em;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
 }
 
 .list-item__image img {
     width: 5em;
     border-radius: 50%;
-    margin: 0.4em 1em;
+    float: left;
+    position: relative;
+    left: 6em;
+    top: 7.5em
 }
 
 .list-item__info {
-    width: 15em;
+    padding-top: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
 }
 
 .list-item__name {
-    margin: 0.6em auto 0 0.5em;
-    font-size: 1.5em;
+    margin: 2em 0 0.2em 0;
+    font-size: 1.4em;
 }
 
-.list-item__email {
+.list-item__email{
+    color: #777;
+    margin: 0 0 0.2em 0;
     font-size: 0.8em;
-    color: rgba(0, 0, 0, .6);
-    margin: 0.1em auto auto 1em;
 }
-
 .list-item__edit {
-    width: 9em;
-    margin: 0;
+    height: 4.2em;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 .list-item__edit__info {
-    padding-top: 0.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: space-around;
 }
-
-.list-item__date, .list-item__number {
-    width: auto;
-    font-size: 0.8em;
-    text-align: right;
-    color: rgba(0, 0, 0, .6);
-    margin: 0.3em 1em auto auto;
-}
-
 
 .list-item__edit__manager {
-    height: 4em;
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    gap: 0.7em;
 }
+
 .list-item__edit__manager img {
     width: 15px;
     height: 15px;
-    align-self: flex-end;
-    margin: auto 1em 1em 0;
-    opacity: 40%;
+    margin-top: 0.4em;
+    opacity: 1;
+    position: relative;
+    left: 7em;
+    bottom: 8em;
+    opacity: 0;
 }
 
+.list-item:hover .list-item__edit__manager img{
+    opacity: 0.4;
+}
+
+/* ---- */
+/* --------------------------------------------------------------*/
 aside {
     width: 20em;
     height: 30em;
